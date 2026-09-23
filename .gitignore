@@ -1,0 +1,27 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Raw / prepared datasets
+data/raw/
+data/prepared/
+
+# Ultralytics temporary outputs
+runs/
+outputs/yolo/deep_pcb_yolov8n/
+outputs/yolo/validation/
+
+# Local caches
+*.cache
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Keep only curated public results under results/
+outputs/

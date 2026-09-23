@@ -1,0 +1,24 @@
+source:
+  top20_file: E:\My GitHub\pcb-defect-vision-analysis\outputs\quality_analysis\top_20_error_images.csv
+  prediction_file: E:\My GitHub\pcb-defect-vision-analysis\outputs\yolo\all_predictions_low_threshold.csv
+  selected_thresholds_file: E:\My GitHub\pcb-defect-vision-analysis\outputs\yolo\selected_thresholds.csv
+frozen_evaluation:
+  quality_threshold: 0.65
+  low_prediction_threshold: 0.05
+  match_iou: 0.33
+  localization_iou_floor: 0.099
+visual_reference_thresholds:
+  small_area_ratio_q25: 0.0024072265625
+  low_contrast_q25: 12.728982517919246
+  complex_edge_density_q75: 0.05386667445401468
+reason_rules:
+  low_confidence_miss: same-class prediction overlaps GT above match_iou but confidence
+    is below quality threshold
+  class_confusion: wrong-class prediction overlaps GT above match_iou
+  localization_iou: same-class prediction is spatially near GT but IoU is below match_iou
+  duplicate_prediction: extra same-class prediction overlaps an already matched GT
+  background_false_positive: quality-threshold FP has no sufficient GT overlap
+  pure_miss: FN has no adequate same-class/wrong-class prediction evidence
+claim_boundary: Automated attribution is heuristic. The script does not automatically
+  declare annotation errors. Rows flagged manual_check_required should be visually
+  confirmed.

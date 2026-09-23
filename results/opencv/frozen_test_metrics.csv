@@ -1,0 +1,2 @@
+﻿selection_source,fixed_threshold,min_area,morph_kernel,blur_kernel,max_area,iou_threshold,test_images,tp,fp,fn,precision,recall,f1,note
+validation_set,20,100,5,3,5000,0.33,500,231,2949,2909,0.07264150943396226,0.07356687898089172,0.07310126582278481,OpenCV frozen test. Parameters selected only on validation set.

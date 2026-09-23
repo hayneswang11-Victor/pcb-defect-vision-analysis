@@ -1,0 +1,44 @@
+﻿project:
+  seed: 42
+
+dataset:
+  raw_root: data/raw/DeepPCB/PCBData
+  prepared_root: data/prepared
+  image_size: 640
+  val_ratio_from_trainval: 0.15
+  classes:
+    0: open
+    1: short
+    2: mousebite
+    3: spur
+    4: copper
+    5: pin-hole
+
+opencv:
+  blur_kernel: 3
+  morph_kernel: 3
+  min_area: 8
+  max_area: 5000
+  iou_threshold: 0.33
+  use_otsu: true
+  fixed_threshold: 35
+
+yolo:
+  model: yolov8n.pt
+  epochs: 40
+  imgsz: 640
+  batch: 8
+  workers: 4
+  device: 0
+  patience: 15
+  project_dir: outputs/yolo
+  run_name: deep_pcb_yolov8n
+
+evaluation:
+  match_iou: 0.33
+  threshold_start: 0.05
+  threshold_end: 0.90
+  threshold_step: 0.05
+  target_recall: 0.90
+  top_error_cases: 20
+

@@ -1,0 +1,18 @@
+selection_basis: validation_set_only
+selection_rule: max_f1_then_recall_then_precision
+fixed_parameters:
+  blur_kernel: 3
+  max_area: 5000
+  iou_threshold: 0.33
+  use_otsu: false
+best_parameters:
+  fixed_threshold: 20
+  min_area: 100
+  morph_kernel: 5
+validation_metrics:
+  tp: 102
+  fp: 780
+  fn: 937
+  precision: 0.11564625850340136
+  recall: 0.09817131857555342
+  f1: 0.10619469026548672

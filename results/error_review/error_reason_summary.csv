@@ -1,0 +1,8 @@
+﻿error_side,primary_reason,count
+FN,low_confidence_miss,49
+FN,pure_miss,14
+FN,class_confusion,9
+FN,localization_iou,1
+FP,background_false_positive,9
+FP,class_confusion,4
+FP,localization_iou,1
